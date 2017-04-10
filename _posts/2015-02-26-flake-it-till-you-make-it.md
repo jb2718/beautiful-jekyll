@@ -1,14 +1,25 @@
 ---
 layout: post
-title: Flake it till you make it
-subtitle: Excerpt from Soulshaping by Jeff Brown
+title: "Smallify" It, Sam! 
+subtitle: The Simplification Problem Solving Strategy
 bigimg: /img/path.jpg
 ---
 
-Under what circumstances should we step off a path? When is it essential that we finish what we start? If I bought a bag of peanuts and had an allergic reaction, no one would fault me if I threw it out. If I ended a relationship with a woman who hit me, no one would say that I had a commitment problem. But if I walk away from a seemingly secure route because my soul has other ideas, I am a flake?  
+# "Smallify" It, Sam! - The Simplification Problem Solving Strategy 
 
-The truth is that no one else can definitively know the path we are here to walk. It’s tempting to listen—many of us long for the omnipotent other—but unless they are genuine psychic intuitives, they can’t know. All others can know is their own truth, and if they’ve actually done the work to excavate it, they will have the good sense to know that they cannot genuinely know anyone else’s. Only soul knows the path it is here to walk. Since you are the only one living in your temple, only you can know its scriptures and interpretive structure.  
 
-At the heart of the struggle are two very different ideas of success—survival-driven and soul-driven. For survivalists, success is security, pragmatism, power over others. Success is the absence of material suffering, the nourishing of the soul be damned. It is an odd and ironic thing that most of the material power in our world often resides in the hands of younger souls. Still working in the egoic and material realms, they love the sensations of power and focus most of their energy on accumulation. Older souls tend not to be as materially driven. They have already played the worldly game in previous lives and they search for more subtle shades of meaning in this one—authentication rather than accumulation. They are often ignored by the culture at large, although they really are the truest warriors.  
+So I've been working on getting better at programming with Ruby lately.  One of the projects I worked on in this process was creating a console game similar to Blackjack.  After I finished working on that project, the idea popped into my mind "Wouldn't it be cool to try to make a more complicated card game like Uno?  You love Uno!"  Ideas pop up all of the time - just as carefreely as toast popping out of a toaster. 
 
-A soulful notion of success rests on the actualization of our innate image. Success is simply the completion of a soul step, however unsightly it may be. We have finished what we started when the lesson is learned. What a fear-based culture calls a wonderful opportunity may be fruitless and misguided for the soul. Staying in a passionless relationship may satisfy our need for comfort, but it may stifle the soul. Becoming a famous lawyer is only worthwhile if the soul demands it. It is an essential failure if you are called to be a monastic this time around. If you need to explore and abandon ten careers in order to stretch your soul toward its innate image, then so be it. Flake it till you make it.
+![Toast pops out of toaster](https://media.giphy.com/media/l3q2Ty3RWark8VgIw/giphy.gif)
+
+It's quite easy to generate "wouldn't it be cool if - " ideas.  Making those ideas happen is not always so friction free.  I've gone through several starts and stops on this Uno project.  I don't know about you, but I watched a lot of Looney Tunes when I was growing up.  There is an episode, "Hare Trigger," with Yosemite Sam and Bugs Bunny where Sam finds himself literally drawing a gun on a sheet of paper.  He works earnestly and has to erase and try again as he goes.  
+
+<a href="https://www.youtube.com/watch?feature=player_embedded&v=nF7s8bTpV-Y" target="_blank">
+    <img src="http://img.youtube.com/vi/nF7s8bTpV-Y/0.jpg" alt="Yosemite Sam draws a gun" width="240" height="180" border="10" />
+</a>
+
+That is what the Uno game process has felt like.  I've planned out my work, started coding, and run into walls.  I've balled up the proverbial sheet of paper, tossed it, and started over only to code myself into tangles of class responsibility.  So now I'm going to take a step back and try another strategy.  My new strategy is to try to "smallify" the problem/project.  I know, I know...I hear your protests: "but "smallify" is not a real word (it's actually wooden like Pinocchio).  Given this essay is not in French, and I don't have to worry about demerits from the Académie Française => I will therefore continue tossing out fabricated words with constrained abandon.  QED.
+
+The idea is to keep reducing the complexity of the project until a clearer plan for how to handle to problem comes into focus.
+
+
