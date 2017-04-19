@@ -1,8 +1,7 @@
 ---
 layout: post
-title: "Smallify" It, Sam! 
+title: Smallify It, Sam!
 subtitle: The Simplification Problem Solving Strategy
-bigimg: /img/path.jpg
 ---
 
 # "Smallify" It, Sam! - The Simplification Problem Solving Strategy 
