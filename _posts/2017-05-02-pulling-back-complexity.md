@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Pulling Back Complexity to Push Forward
+title: Pulling Back Complexity to Push Forward - Part I
 subtitle: The Simplification Problem Solving Strategy
 ---
 
