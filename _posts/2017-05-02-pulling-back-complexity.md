@@ -1,9 +1,5 @@
----
-layout: post
-title: Pulling Back Complexity to Push Forward
-subtitle: The Simplification Problem Solving Strategy
----
-
+github_markdown_link
+http://dillinger.io/
 # Pulling Back Complexity to Push Forward
 
 Ideas seem to pop up all of the time!  They appear while I blend my morning smoothie or after I listen to a great podcast.  They spring forth effortlessly and with all the effervescence of this little cartoon piece of toast. 
@@ -100,29 +96,39 @@ As you can see I started adding in a little bit of input validation.  So now our
 ```ruby
 # previous code omitted here for brevity...
 
-def valid_card_selection?(choice)
-  return true if choice == 1
-  false
-end
-
-def pull_card
-  rand(10)
+def play_again?(choice)
+  case choice.downcase
+  when 'y','yes'
+    true
+  else
+    false
+  end
 end
 
 # ...code omitted here for brevity
 
 loop do 
-  prompt "Type 1 to pick a card from the deck"
+  prompt "Hello, #{user_name}!"
+  
+  loop do 
+    prompt "Type 1 to pick a card from the deck"
+    response = gets.chomp
+    
+    break if valid_card_selection?(response.to_i)
+    prompt "That is an invalid selection...please try again!"
+  end
+  
+  user_card = pull_card
+  
+  prompt "Your card is: #{user_card}"
+  
+  prompt "Would you like to play again? [y]es [n]o"
   response = gets.chomp
   
-  break if valid_card_selection?(response.to_i)
-  prompt "That is an invalid selection...please try again!"
+  break unless play_again?(response)
 end
 
-user_card = pull_card
+prompt "Thank you for playing Uno, #{user_name}!  Goodbye!!"
 
-prompt "Your card is: #{user_card}"
 
 ```
-
-
