@@ -21,6 +21,7 @@ So what do I mean by “making the project smaller”?  I mean I am going to sta
 
 During the first several iterations of trying to construct this game, I started by trying to break out methods and data from the the rules of the Uno game.  (link to that article you wrote if you can find it...)  This time, I will try to simplify the rules first.  I want to make the game extremely simple so knowing how to proceed from step to step will be clearer.  I am certain this process would differ from person to person; nevertheless, it will be helpful to me to document this process, and I hope others find it useful as well.
 
+
 ## Getting Started
 
 At its core, this game is going to involve interaction between a user and the application.  I will only worry about what it would look like for one user to interact with a program right now.  I'm imagining some kind of interface that looks like this:
@@ -34,7 +35,7 @@ At its core, this game is going to involve interaction between a user and the ap
 # => Hello, User1!
 ```
 
-So code-wise, we might have something like the following:
+So code-wise, I might have something like the following:
 
 ##### main.rb
 ```ruby
@@ -50,7 +51,6 @@ user_name = gets.chomp
 prompt "Hello, #{user_name}!"
 
 ```
-
 
 Ok, this is pretty straightforward.  The next step I want to tackle is thinking about the idea of how the user selects cards.  I will not worry about the 108 different cards that are part of a full Uno game.  Instead, I am going to reduce the deck of 108 cards with different colors and action types down to a simple collection of 10 numbers from 0 to 9.  So our deck in this simplified version of the game has neither colors, nor action cards.  It also contains only 10 digit cards total instead of 76 digit cards as is the case in the full game.
 
@@ -91,8 +91,7 @@ prompt "Your card is: #{user_card}"
 
 ```
 
-
-As you can see I started adding in a little bit of input validation.  So now our user can select one card.  But wait!  The user's "selection" of a card does not lead to a reduction in the total number of cards available.  This is true, however, I am going to suppress that requirement for now.  I want to add in one more piece of functionality to this simple thumbnail of my program before beginning to add in the first layer of complexity.  What I want to do now is create a basic game loop, so the user can replay the game as many times as desired.
+As you can see I started adding in a little bit of input validation.  So now our user can select one card.  But wait...the user's "selection" of a card does not lead to a reduction in the total number of cards available!  This is true, however, I am going to suppress that requirement for now.  I want to add in one more piece of functionality to this simple thumbnail of my program before beginning to add in the first layer of complexity.  What I want to do now is create a basic game loop, so the user can replay the game as many times as desired.
 
 ##### main.rb
 ```ruby
@@ -132,5 +131,90 @@ end
 
 prompt "Thank you for playing Uno, #{user_name}!  Goodbye!!"
 
+
+```
+
+
+## Adding the First Layer of Complexity
+
+Currently I have a very simple project core.  It has one user interacting with the “game” in a loop.  Each step forward at this level was clear for me.  From here, I want to add the first layer of complexity.  I will start by adding another player.  The second player will be a computer player, so its functionality will be similar to the first user, yet different at the same time. 
+
+##### main.rb
+```ruby
+# previous code omitted here for brevity...
+
+prompt 'Welcome to Uno!'
+prompt 'What is your name?'
+user_name = gets.chomp
+computer_name = "Computer"
+
+loop do 
+  prompt "Hello, #{user_name}!"
+  
+  loop do 
+    prompt "Type 1 to pick a card from the deck"
+    response = gets.chomp
+    
+    break if valid_card_selection?(response.to_i)
+    prompt "That is an invalid selection...please try again!"
+  end
+  
+  user_card = pull_card
+  computer_card = pull_card
+  
+  prompt "#{user_name}'s card is: #{user_card}"
+  prompt "#{computer_name}'s card is: #{computer_card}"
+  
+  prompt "Would you like to play again? [y]es [n]o"
+  response = gets.chomp
+  
+  break unless play_again?(response)
+end
+
+prompt "Thank you for playing Uno, #{user_name}!  Goodbye!!"
+
+```
+
+I added a line to set up the computer player's name, and then had the computer player select a card.  This functionality is pretty similar to that of the human user.  The code for the human and computer players will surely be a candidate for consolidation into classes at a later point.
+
+Now that I have two players in the system, I want to plant a seed for the inter-player competition.  At this stage, the basic competition between players will be expressed as a simple comparison of the value of the cards each player selected.
+
+
+```ruby
+# ...code omitted here for brevity
+
+def board_manager_find_result(user_val, cpu_val)
+  case
+  when user_val > cpu_val
+    :human_user
+  when user_val < cpu_val
+    :cpu_user
+  else
+    :tie
+  end
+end
+
+def show_game_result(result_str)
+  case result_str
+  when :human_user
+    puts "You won!"
+  when :cpu_user
+    puts "Sorry, the computer won!"
+  else
+    puts "This is a tie!"
+  end  
+end
+
+# ...code omitted here for brevity
+  
+  user_card = pull_card
+  computer_card = pull_card
+  
+  prompt "#{user_name}'s card is: #{user_card}"
+  prompt "#{computer_name}'s card is: #{computer_card}"
+  
+  game_result = board_manager_find_result(user_card, computer_card)
+  show_game_result(game_result)
+# ...code omitted here for brevity
 
 ```
