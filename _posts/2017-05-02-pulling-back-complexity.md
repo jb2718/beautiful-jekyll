@@ -220,6 +220,6 @@ end
 ```
 ## Wrapping Up Part I
 
-So far we have created a very simple interactive application.  Although it is very basic, it has the rudiments of a competitive interactive game.  At its core, that is exactly what Uno is.  Arriving to this point has been straightforward.  I actually made it further than this when I was trying to build the Uno game using my old strategy.  However, my hypothesis is that this new strategy will begin to pay off very soon.
+So far I have created a very simple interactive application.  Although it is very basic, it has the rudiments of a competitive interactive game.  At its core, that is exactly what Uno is.  Arriving to this point has been straightforward.  I actually made it further than this when I was trying to build the Uno game using my old strategy.  However, my hypothesis is that this new strategy will begin to pay off very soon.
 
 In the next part, I will start pulling out some of the big ideas that give Uno its character, such as altering the order of turns or compelling a player to select a card.  I plan to take these big ideas and find ways to simplify them, so I can add them to my little game core.  This is one place where I began going in circles when I attempted this project before.  I am curious to see how it goes this time.
