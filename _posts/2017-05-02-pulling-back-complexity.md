@@ -1,6 +1,8 @@
-github_markdown_link
-http://dillinger.io/
-# Pulling Back Complexity to Push Forward
+---
+layout: post
+title: Pulling Back Complexity to Push Forward
+subtitle: The Simplification Problem Solving Strategy
+---
 
 Ideas seem to pop up all of the time!  They appear while I blend my morning smoothie or after I listen to a great podcast.  They spring forth effortlessly and with all the effervescence of this little cartoon piece of toast. 
 
