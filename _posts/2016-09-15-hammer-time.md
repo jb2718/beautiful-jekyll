@@ -126,7 +126,7 @@ Now let’s get this thing in action and start looking for behaviors and what’
 | Match |   |
 | Deck  |   |
 | Flow  | alter flow, skip, reverse, change color  |
-| Dangling Action: command   |
+| *Dangling Action* | *command*   |
  	
 
  
