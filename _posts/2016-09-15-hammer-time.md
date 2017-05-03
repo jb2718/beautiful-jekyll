@@ -126,7 +126,7 @@ Now let’s get this thing in action and start looking for behaviors and what’
 | Match |   |
 | Deck  |   |
 | Flow  | alter flow, skip, reverse, change color  |
-| *Dangling Action* | *command*   |
+|  | *Dangling Action: command* |
  	
 
  
@@ -139,5 +139,3 @@ The other issue I would like to touch on briefly is related to the card object/n
 So essentially those nouns are part of the card class. How about the discard card or the wild card that were mentioned in the description? So “discard” and “wild” would be adjectives describing the “card” object/noun. I think these may end up being types of cards. So it may be that we end up creating sub-classes for those…or not. I am not 100% sure at this stage, and that is okay.
 
 It’s important to remember to stay loose at this stage and not get too hung up on details. This sketch will surely change as we move forward in building the game. We are just getting a sense for what we will be working with for this particular project.
-
-That is all for this episode of building the Uno game. On the next post for this project, I’ll start defining some of those classes and methods we listed in our sketch as well as additional ones we may need. I will also explore a way to keep myself organized in the process of testing the code over and over again to see if what I just wrote works as I hoped it would.
