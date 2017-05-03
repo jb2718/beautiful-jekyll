@@ -114,7 +114,6 @@ Here are the objects/nouns I came up with from my description:
 * Flow 	
 
 Now let’s get this thing in action and start looking for behaviors and what’s happening….in other words verbs.
-
 <div style="text-align:center"><img src="../img/blog_images/hammer_time/verb.png"></div>
 
 | Objects  |  Actions |
