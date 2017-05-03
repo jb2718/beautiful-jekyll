@@ -52,7 +52,7 @@ prompt "Hello, #{user_name}!"
 
 ```
 
-Ok, this is pretty straightforward.  The next step I want to tackle is thinking about the idea of how the user selects cards.  I will not worry about the 108 different cards that are part of a full Uno game.  Instead, I am going to reduce the deck of 108 cards with different colors and action types down to a simple collection of 10 numbers from 0 to 9.  So our deck in this simplified version of the game has neither colors, nor action cards.  It also contains only 10 digit cards total instead of 76 digit cards as is the case in the full game.
+Ok, this is pretty straightforward.  The next step I want to tackle is thinking about the idea of how the user selects cards.  I will not worry about the 108 different cards that are part of a full Uno game.  Instead, I am going to reduce the deck of 108 cards with different colors and action types down to a simple collection of ten numbers from 0 to 9.  So our deck in this simplified version of the game has neither colors, nor action cards.  It also contains only ten digit cards total instead of 76 digit cards as is the case in the full game.
 
 ##### basic card selection interface
 ```ruby
@@ -222,4 +222,4 @@ end
 
 So far I have created a simple interactive application.  Although it is quite basic, it has the rudiments of a competitive interactive game.  At its core, that is exactly what Uno is.  Arriving to this point has been straightforward.  I actually made it further than this when I was trying to build the Uno game using my old strategy.  However, my hypothesis is that this new strategy will begin to pay off very soon.
 
-In the next part of this series, I will start pulling out some of the big ideas that give Uno its character.  I will take large ideas, such as altering the order of turns or compelling a player to select a card, and find ways to simplify them.  This was one place where I began going in circles when I attempted this project before.  I am curious to see how it goes this time.
+In the next part of this series, I will start pulling out some of the big ideas that give Uno its character.  I will take large ideas, such as altering the order of turns or compelling a player to select a card, and find ways to simplify them.  This was one place where I began going in circles when I attempted this project before.  I am curious to see how it progresses this time.
