@@ -3,10 +3,9 @@ layout: post
 title: It’s Hammer Time!
 subtitle: Starting the Uno Game
 ---
-
 I’m working on getting into the habit of building things on a regular basis. One goal of this blog is simply to share what I learn along the way. Hopefully something here will be helpful to someone else out there building away. Alright, enough intro…let’s get to work!
 
-<img src="../img/blog_images/hammer_time/hammer.jpg">
+<div style="text-align:center"><img src="../img/blog_images/hammer_time/hammer.jpg"></div>
 
 The first project I would like to work on is making an Uno computer game using the Ruby programming language. I used to love Uno so much as a kid! Maybe it was the bright colors and minimalist design of the cards. Or perhaps it was the joy of slapping a Draw Four down on the table. Most likely, it was because the rules were simple enough to understand at age four or five - and it was always a blast to get the whole family playing a game together.
 
@@ -116,7 +115,7 @@ Here are the objects/nouns I came up with from my description:
 
 Now let’s get this thing in action and start looking for behaviors and what’s happening….in other words verbs.
 
-<img src="../img/blog_images/hammer_time/verb.png">
+<div style="text-align:center"><img src="../img/blog_images/hammer_time/verb.png"></div>
 
 | Objects  |  Actions |
 |---|---|
@@ -128,17 +127,9 @@ Now let’s get this thing in action and start looking for behaviors and what’
 | Match |   |
 | Deck  |   |
 | Flow  | alter flow, skip, reverse, change color  |
- 	
- 	
- 	
- 	
- 	
- 	
- 	
- 	
+| Dangling Action: command   |
  	
 
-Dangling Action: command
  
 ## A Couple of Notes
 
