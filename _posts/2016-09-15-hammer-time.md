@@ -1,10 +1,8 @@
 ---
 layout: post
 title: It’s Hammer Time!
-subtitle: (Uno Part 1)
+subtitle: Starting the Uno Game
 ---
-
- It’s Hammer Time! (Uno Part 1)
 
 I’m working on getting into the habit of building things on a regular basis. One goal of this blog is simply to share what I learn along the way. Hopefully something here will be helpful to someone else out there building away. Alright, enough intro…let’s get to work!
 
@@ -16,7 +14,7 @@ I am currently working through an excellent online program called Launch School 
 
 In order to to break this project down into an object oriented design, I will need to go through a couple of steps. To start, I’ll come up with a description of the game. Then from that description, I want to go through and pull out a rough sketch of classes and methods. Here is a description of the game. I’ve simplified some aspects of the game at this stage:
  
-Description
+## Description
 
     Uno is a game for two players where players start with seven cards each and try to get rid of their cards first
 
@@ -35,10 +33,10 @@ Description
         Wild: changes the color to match on the discard pile
 
  
-Rough Sketch of Classes and Methods
+## Rough Sketch of Classes and Methods
 
 Here is a rough sketch of classes and methods for the Uno game based on the description from above.
-
+```ruby
 class Game
   def initialize
   end
@@ -99,39 +97,50 @@ class Flow
   def change_color
   end
 end
-
+```
  
-Going from the Description to Classes and Methods
+## Going from the Description to Classes and Methods
 
 There was an intermediate step I took before coming up with that rough sketch of classes and methods written in Ruby. First, I tried to pull out all of the important object-like entities from the description and write those down. One way to think about that is to look for a person, place, or thing…in other words, a noun
 
 Here are the objects/nouns I came up with from my description:
-Objects 	
-Game 	
-Player 	
-Card 	
-Hand 	
-Turn 	
-Match 	
-Deck 	
-Flow 	
+* Objects 	
+* Game 	
+* Player 	
+* Card 	
+* Hand 	
+* Turn 	
+* Match 	
+* Deck 	
+* Flow 	
 
 Now let’s get this thing in action and start looking for behaviors and what’s happening….in other words verbs.
 
 <img src="../img/blog_images/hammer_time/verb.png">
-Objects 	Actions
-Game 	start, deal cards (this is implicit in ‘players start with 7 cards’)
-Player 	add card/pull card, get rid of card, choose
-Card 	match card
-Hand 	
-Turn 	
-Match 	
-Deck 	
-Flow 	alter flow, skip, reverse, change color
+
+| Objects  |  Actions |
+|---|---|
+| Game  |  start, deal cards (this is implicit in ‘players start with 7 cards’) |
+| Player  |  add card/pull card, get rid of card, choose |
+| Card  | match card  |
+| Hand  |   |
+| Turn  |   |
+| Match |   |
+| Deck  |   |
+| Flow  | alter flow, skip, reverse, change color  |
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
 
 Dangling Action: command
  
-A Couple of Notes
+## A Couple of Notes
 
 There are a couple of things I would like to mention. As you can see, we have an action (“command”) that does not seem to group easily with any of the objects we pulled out. We will just put it to the side for now. This is a loose process at this stage, so it is okay if not everything fits neatly into a category.
 
