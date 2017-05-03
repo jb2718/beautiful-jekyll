@@ -17,9 +17,9 @@ Hmmm.  Perhaps I need to take a step back and try another strategy.  Instead of 
 
 ## Stripping Back Complexity
 
-So what do I mean by “making the project smaller”?  I mean I am going to start stripping back the complexity.  For example, according to [unorules.com](http://www.unorules.com/), Uno is a game that can be played with 2 to 10 players.  It has 108 cards comprised of digit cards from 0 to 9 of various colors and 5 types of action cards.  Before going any further into the instructions, there are already many ways I can simplify the game.  I can restrict the number of players and reduce the types of cards allowed.  The idea is to keep reducing the complexity of the project until a clearer plan for how to handle the problem comes into focus.  Subsequently, I will gradually re-introduce those layers of complexity until I build back up to the full game.
+So what do I mean by “making the project smaller”?  I mean I am going to start stripping back the complexity.  For example, according to [unorules.com](http://www.unorules.com/), Uno is a game that can be played with two to ten players.  It has 108 cards comprised of digit cards from 0 to 9 of various colors and five types of action cards.  Before going any further into the instructions, there are already many ways I can simplify the game.  I can restrict the number of players and reduce the types of cards allowed.  The idea is to keep reducing the complexity of the project until a clearer plan for how to handle the problem comes into focus.  Subsequently, I will gradually re-introduce those layers of complexity until I build back up to the full game.
 
-During the first several iterations of trying to construct this game, [I started by trying to break out methods and data from the the rules of the Uno game.](http://jessicabattle.com/2016-09-15-hammer-time/)  This time, I will try to simplify the rules first.  I want to make the game extremely simple so knowing how to proceed from step to step will be clearer.  I am certain this process would differ from person to person; nevertheless, it will be helpful to me to document this process, and I hope others find it useful as well.
+During the first several iterations of trying to construct this game, I started by trying to break out methods and data from the the rules of the Uno game.  ([See this blog post.](http://jessicabattle.com/2016-09-15-hammer-time/))  This time, I will try to simplify the rules first.  I want to make the game extremely simple so knowing how to proceed from step to step will be clearer.  I am certain this process would differ from person to person; nevertheless, it will be helpful to me to document this process, and I hope others find it useful as well.
 
 
 ## Getting Started
@@ -91,7 +91,7 @@ prompt "Your card is: #{user_card}"
 
 ```
 
-As you can see I started adding in a little bit of input validation.  So now our user can select one card.  But wait...the user's "selection" of a card does not lead to a reduction in the total number of cards available!  This is true, however, I am going to suppress that requirement for now.  I want to add in one more piece of functionality to this simple thumbnail of my program before beginning to add in the first layer of complexity.  What I want to do now is create a basic game loop, so the user can replay the game as many times as desired.
+As you can see I started adding in a little bit of input validation.  So now our user can select one card.  But wait...the user's "selection" of a card does not lead to a reduction in the total number of cards available!  This is true; however, I am going to suppress that requirement for now.  I want to add in one more piece of functionality to this simple thumbnail of my program before beginning to add in the first layer of complexity.  What I want to do now is create a basic game loop, so the user can replay the game as many times as desired.
 
 ##### uno1.rb
 ```ruby
@@ -137,7 +137,7 @@ prompt "Thank you for playing Uno, #{user_name}!  Goodbye!!"
 
 ## Adding the First Layer of Complexity
 
-Currently I have a very simple project core.  It has one user interacting with the “game” in a loop.  Each step forward at this level was clear for me.  From here, I want to add the first layer of complexity.  I will start by adding another player.  The second player will be a computer player, so its functionality will be similar to the first user, yet different at the same time. 
+Currently I have a very simple project core.  It has one user interacting with the “game” in a loop.  Each step forward at this level was clear for me.  From here, I want to add the first layer of complexity.  I will start by adding another player.  The second player will be a computer player, so its functionality will be similar to that of the first user. 
 
 ##### uno2.rb
 ```ruby
@@ -175,7 +175,7 @@ prompt "Thank you for playing Uno, #{user_name}!  Goodbye!!"
 
 ```
 
-I added a line to set up the computer player's name, and then had the computer player select a card.  This functionality is pretty similar to that of the human user.  The code for the human and computer players will surely be a candidate for consolidation into classes at a later point.
+I added a line to set up the computer player's name, then had the computer player select a card.  As mentioned before, this functionality is pretty similar to that of the human user.  The code for the human and computer players will surely be a candidate for consolidation at a later point.
 
 Now that I have two players in the system, I want to plant a seed for the inter-player competition.  At this stage, the basic competition between players will be expressed as a simple comparison of the value of the cards each player selected.
 
@@ -220,6 +220,6 @@ end
 ```
 ## Wrapping Up Part I
 
-So far I have created a very simple interactive application.  Although it is very basic, it has the rudiments of a competitive interactive game.  At its core, that is exactly what Uno is.  Arriving to this point has been straightforward.  I actually made it further than this when I was trying to build the Uno game using my old strategy.  However, my hypothesis is that this new strategy will begin to pay off very soon.
+So far I have created a simple interactive application.  Although it is quite basic, it has the rudiments of a competitive interactive game.  At its core, that is exactly what Uno is.  Arriving to this point has been straightforward.  I actually made it further than this when I was trying to build the Uno game using my old strategy.  However, my hypothesis is that this new strategy will begin to pay off very soon.
 
-In the next part, I will start pulling out some of the big ideas that give Uno its character, such as altering the order of turns or compelling a player to select a card.  I plan to take these big ideas and find ways to simplify them, so I can add them to my little game core.  This is one place where I began going in circles when I attempted this project before.  I am curious to see how it goes this time.
+In the next part of this series, I will start pulling out some of the big ideas that give Uno its character.  I will take large ideas, such as altering the order of turns or compelling a player to select a card, and find ways to simplify them.  This was one place where I began going in circles when I attempted this project before.  I am curious to see how it goes this time.
