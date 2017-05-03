@@ -8,8 +8,7 @@ subtitle: (Uno Part 1)
 
 I’m working on getting into the habit of building things on a regular basis. One goal of this blog is simply to share what I learn along the way. Hopefully something here will be helpful to someone else out there building away. Alright, enough intro…let’s get to work!
 
-hammer.jpg()
-<img src="../img/blog_images/hammer_time/hammer.jpg" width="650px">
+<img src="../img/blog_images/hammer_time/hammer.jpg">
 
 The first project I would like to work on is making an Uno computer game using the Ruby programming language. I used to love Uno so much as a kid! Maybe it was the bright colors and minimalist design of the cards. Or perhaps it was the joy of slapping a Draw Four down on the table. Most likely, it was because the rules were simple enough to understand at age four or five - and it was always a blast to get the whole family playing a game together.
 
@@ -119,7 +118,7 @@ Flow
 
 Now let’s get this thing in action and start looking for behaviors and what’s happening….in other words verbs.
 
-verb.png
+<img src="../img/blog_images/hammer_time/verb.png">
 Objects 	Actions
 Game 	start, deal cards (this is implicit in ‘players start with 7 cards’)
 Player 	add card/pull card, get rid of card, choose
