@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Graficos
+title: Gráficos
 subtitle: 
 ---
 
